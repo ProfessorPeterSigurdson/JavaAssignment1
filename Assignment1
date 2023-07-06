@@ -1,0 +1,29 @@
+public class Peanut1 {
+    public static void main(String[] args) {
+        Factory f1 = new Factory();
+        f1.MakeObjects();
+    }
+}
+
+// make a class to generate objects
+// the factory pattern
+
+class Factory{
+    public void MakeObjects(){
+        // here is the purpose of the Factory Design Pattern
+        // we make objects in a LOOP
+        Student s = new Student();
+        for (int i=0; i<10; i++){
+            s.StudentName = "Student" + i;
+            s.studentID = "ID" + i;
+            s.program = "Program" + i;
+            System.out.println(s.StudentName + " " + s.studentID + " " + s.program);
+        }   
+    }
+}
+
+class Student{
+    public String StudentName;
+    public String studentID;
+    public String program;
+}
