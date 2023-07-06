@@ -9,16 +9,17 @@ public class Peanut1 {
 // the factory pattern
 
 class Factory{
+    Student [] myStudents = new Student[10];
     public void MakeObjects(){
         // here is the purpose of the Factory Design Pattern
         // we make objects in a LOOP
-        Student s = new Student();
+        Student s; 
         for (int i=0; i<10; i++){
-            s.StudentName = "Student" + i;
-            s.studentID = "ID" + i;
-            s.program = "Program" + i;
-            System.out.println(s.StudentName + " " + s.studentID + " " + s.program);
-        }   
+            s = new Student();
+            s.StudentName = "Student " + i;
+            s.studentID = "ID " + i;
+            s.program = "Program " + i;
+            myStudents[i] = s;        }   
     }
 }
 
