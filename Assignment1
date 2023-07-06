@@ -2,6 +2,7 @@ public class Peanut1 {
     public static void main(String[] args) {
         Factory f1 = new Factory();
         f1.MakeObjects();
+        f1.PrintObjects();
     }
 }
 
@@ -21,10 +22,18 @@ class Factory{
             s.program = "Program " + i;
             myStudents[i] = s;        }   
     }
+    public void PrintObjects(){
+        for (int i=0; i<10; i++){
+            System.out.println(myStudents[i]);
+        }
+    }
 }
 
 class Student{
     public String StudentName;
     public String studentID;
     public String program;
+    public String toString(){
+        return StudentName + " " + studentID + " " + program;
+    }
 }
